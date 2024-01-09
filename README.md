@@ -2,11 +2,11 @@
 
 ## Description
 
-This is a simple Godot project that was created by me and my friend Angelo Garcia. This project mainly focuses on data transfering between scence in the godot engine. There is a basic gameplay loop that consists of working and talking to an NPC (Miru), with the goal of raising affection levels. Please note that this is still a demo with a focus on my growth and learning of the engine.
+This is a simple Godot project that was created by me and my friend Angelo Garcia. This project mainly focuses on data transfering between scence in the godot engine. Please note that this is still a demo with a focus on my growth and learning of the engine. May be updated in the future.
 
 ## Usage
 
-To test the demon, it is only necesary to download the Miru.exe and the Miru.pck files, and run the Miru.exe
+To test the demo, it is only necesary to download the Miru.exe and the Miru.pck files, and run the Miru.exe
 
 Password: miru
 
