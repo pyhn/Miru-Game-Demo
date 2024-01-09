@@ -1,0 +1,288 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://main_menu/Options.gd" type="Script" id=1]
+[ext_resource path="res://fonts/MS Gothic.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Options" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.333333, 0.45098, 0.541176, 1 )
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -242.0
+margin_top = -90.0
+margin_bottom = -38.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "BACK"
+flat = true
+
+[node name="Vbox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -249.5
+margin_top = -100.0
+margin_right = 249.5
+margin_bottom = 100.0
+
+[node name="SFX" type="HBoxContainer" parent="Vbox"]
+margin_right = 499.0
+margin_bottom = 31.0
+
+[node name="Label" type="Label" parent="Vbox/SFX"]
+margin_right = 45.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 2 )
+text = "SFX"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="Vbox/SFX"]
+margin_left = 49.0
+margin_right = 499.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 450, 31 )
+
+[node name="BGM" type="HBoxContainer" parent="Vbox"]
+margin_top = 35.0
+margin_right = 499.0
+margin_bottom = 66.0
+
+[node name="Label" type="Label" parent="Vbox/BGM"]
+margin_right = 45.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 2 )
+text = "BGM"
+uppercase = true
+
+[node name="HSlider" type="HSlider" parent="Vbox/BGM"]
+margin_left = 49.0
+margin_right = 499.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 450, 31 )
+
+[node name="Hints" type="HBoxContainer" parent="Vbox"]
+margin_top = 70.0
+margin_right = 499.0
+margin_bottom = 110.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Vbox/Hints"]
+margin_left = 172.0
+margin_top = 4.0
+margin_right = 247.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 2 )
+text = "hints"
+uppercase = true
+
+[node name="CheckButton" type="CheckButton" parent="Vbox/Hints"]
+margin_left = 251.0
+margin_right = 327.0
+margin_bottom = 40.0
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+pressed = true
+enabled_focus_mode = 0
+
+[node name="Delete" type="Button" parent="Vbox"]
+margin_top = 114.0
+margin_right = 499.0
+margin_bottom = 141.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "DELETE SAVE"
+flat = true
+
+[node name="Credits" type="Button" parent="Vbox"]
+margin_top = 145.0
+margin_right = 499.0
+margin_bottom = 172.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "CREDITS"
+flat = true
+
+[node name="DeleteBox" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 200.0
+margin_bottom = 100.0
+
+[node name="ColorRect" type="ColorRect" parent="DeleteBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.282353, 0.282353, 0.282353, 1 )
+
+[node name="Label" type="Label" parent="DeleteBox"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -165.0
+margin_top = 30.0
+margin_right = 165.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 5 )
+text = "Which File do you want to remove?"
+uppercase = true
+
+[node name="VBox" type="VBoxContainer" parent="DeleteBox"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.0
+margin_top = -35.0
+margin_right = 163.0
+margin_bottom = 82.0
+
+[node name="Delete1" type="Button" parent="DeleteBox/VBox"]
+margin_right = 325.0
+margin_bottom = 27.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "SAVE 1"
+flat = true
+
+[node name="Delete2" type="Button" parent="DeleteBox/VBox"]
+margin_top = 31.0
+margin_right = 325.0
+margin_bottom = 58.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "SAVE 2"
+flat = true
+
+[node name="Delete3" type="Button" parent="DeleteBox/VBox"]
+margin_top = 62.0
+margin_right = 325.0
+margin_bottom = 89.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "SAVE 3"
+flat = true
+
+[node name="Cancel" type="Button" parent="DeleteBox"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -72.0
+margin_top = -40.0
+rect_min_size = Vector2( 50, 40 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 6 )
+enabled_focus_mode = 0
+text = "CANCEL"
+flat = true
+
+[node name="CreditsBox" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -100.0
+margin_right = 200.0
+margin_bottom = 100.0
+
+[node name="ColorRect" type="ColorRect" parent="CreditsBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.282353, 0.282353, 0.282353, 1 )
+
+[node name="Label" type="Label" parent="CreditsBox"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -34.5
+margin_right = 170.0
+margin_bottom = 34.5
+custom_fonts/font = SubResource( 5 )
+text = "Art by: Angelo \"Netqwrk\" Garcia
+
+Programmer: Reimark \"Pyhn\" Ronabio"
+uppercase = true
+
+[node name="Credits_Cancel" type="Button" parent="CreditsBox"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -72.0
+margin_top = -40.0
+rect_min_size = Vector2( 50, 40 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 6 )
+enabled_focus_mode = 0
+text = "CANCEL"
+flat = true
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Vbox/Delete" to="." method="_on_Delete_pressed"]
+[connection signal="pressed" from="Vbox/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="DeleteBox/VBox/Delete1" to="." method="_on_Delete1_pressed"]
+[connection signal="pressed" from="DeleteBox/VBox/Delete2" to="." method="_on_Delete2_pressed"]
+[connection signal="pressed" from="DeleteBox/VBox/Delete3" to="." method="_on_Delete3_pressed"]
+[connection signal="pressed" from="DeleteBox/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="CreditsBox/Credits_Cancel" to="." method="_on_Credits_Cancel_pressed"]

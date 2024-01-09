@@ -1,0 +1,159 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/MS Gothic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://levels/Level.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Shop" type="CanvasLayer"]
+script = ExtResource( 2 )
+lvl_name = "Shop"
+
+[node name="Shop" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="Shop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.717647, 0.713726, 0.360784, 1 )
+
+[node name="BackToRoom" type="Button" parent="Shop"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -242.0
+margin_top = -90.0
+margin_bottom = -38.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "BACK"
+flat = true
+
+[node name="ItemVBox" type="VBoxContainer" parent="Shop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -224.5
+margin_top = -194.0
+margin_right = 224.5
+margin_bottom = 194.0
+
+[node name="IceCream" type="Button" parent="Shop/ItemVBox"]
+margin_right = 449.0
+margin_bottom = 52.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Ice Cream"
+flat = true
+
+[node name="Pudding" type="Button" parent="Shop/ItemVBox"]
+margin_top = 56.0
+margin_right = 449.0
+margin_bottom = 108.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Pudding"
+flat = true
+
+[node name="ColdMed" type="Button" parent="Shop/ItemVBox"]
+margin_top = 112.0
+margin_right = 449.0
+margin_bottom = 164.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Cold Medicine"
+flat = true
+
+[node name="CookIngred" type="Button" parent="Shop/ItemVBox"]
+margin_top = 168.0
+margin_right = 449.0
+margin_bottom = 220.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Cooking Ingredients"
+flat = true
+
+[node name="Noodles" type="Button" parent="Shop/ItemVBox"]
+margin_top = 224.0
+margin_right = 449.0
+margin_bottom = 276.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Noodles"
+flat = true
+
+[node name="MovieTickets" type="Button" parent="Shop/ItemVBox"]
+margin_top = 280.0
+margin_right = 449.0
+margin_bottom = 332.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Movie Tickets"
+flat = true
+
+[node name="EnergyDrinks" type="Button" parent="Shop/ItemVBox"]
+margin_top = 336.0
+margin_right = 449.0
+margin_bottom = 388.0
+focus_mode = 0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.54902, 0.54902, 0.54902, 1 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Park Tickets"
+flat = true
+
+[node name="Money" type="Label" parent="Shop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -607.0
+margin_top = -331.0
+margin_right = -278.0
+margin_bottom = -281.0
+custom_fonts/font = SubResource( 2 )
+text = "Money:"
+
+[connection signal="pressed" from="Shop/BackToRoom" to="." method="_on_BackToRoom_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/IceCream" to="." method="_on_IceCream_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/Pudding" to="." method="_on_Pudding_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/ColdMed" to="." method="_on_ColdMed_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/CookIngred" to="." method="_on_CookIngred_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/Noodles" to="." method="_on_Noodles_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/MovieTickets" to="." method="_on_MovieTickets_pressed"]
+[connection signal="pressed" from="Shop/ItemVBox/EnergyDrinks" to="." method="_on_EnergyDrinks_pressed"]
